@@ -1,0 +1,73 @@
+format = """
+$time\
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character
+"""
+add_newline = false
+
+palette = "gruvbox_dark"
+
+[character]
+format = "$symbol "
+success_symbol = '[λ](bold fg:color_green)'
+error_symbol = '[λ](fg:color_red)'
+
+[git_branch]
+style = 'fg:color_aqua'
+symbol = ' '
+
+[git_status]
+format = '$all_status$ahead_behind '
+
+# Большие цветные квадраты для статусов файлов
+conflicted = '\[[ ](fg:color_red)${count}\]'
+staged = '\[[ ](fg:color_aqua)${count}\]'
+modified = '\[[ ](fg:color_yellow)${count}\]'
+untracked = '\[[ ](fg:color_orange)${count}\]'
+deleted = '\[[ ](fg:color_red)${count}\]'
+renamed = '\[[󰑕 ](fg:color_purple)${count}\]'
+stashed = '\[[ ](fg:color_blue)${count}\]'
+
+ahead = '\[[ ](fg:color_green)${ahead_count}\]'
+behind = '\[[ ](fg:color_orange)${behind_count}\]'
+diverged = '\[[ ](fg:color_green)${ahead_count}|[ ](fg:color_blue)${behind_count}\]'
+
+windows_starship = "/mnt/c/Program Files/starship/bin/starship.exe"
+
+[directory.substitutions]
+'Documents' = '󰈙'
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
+
+# Директория - с иконками и усечением для длинных путей
+[directory]
+style = 'bold fg:color_blue'  # Синий текст на темном фоне
+format = '[ $path ]($style)'
+truncation_length = 5
+truncation_symbol = '…/'
+home_symbol = '~'
+truncate_to_repo = false
+
+[time]
+format = '\[[$time]($style)\]'
+disabled = false
+style = 'fg:color_yellow bold'  # Темно-серый фон, желтый текст
+time_format = '%H:%M'
+
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
