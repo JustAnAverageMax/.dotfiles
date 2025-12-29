@@ -1,0 +1,9 @@
+[user]
+	email = maximkrutalevich@gmail.com
+	name = Maksim Krutalevich
+[core]
+	editor = nvim
+[alias]
+	adgo = log --all --decorate --graph --oneline
+[init]
+	defaultBranch = master

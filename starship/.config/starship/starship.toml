@@ -11,7 +11,7 @@ add_newline = false
 palette = "gruvbox_dark"
 
 [character]
-format = "$symbol "
+format = " $symbol "
 success_symbol = '[λ](bold fg:color_green)'
 error_symbol = '[λ](fg:color_red)'
 

@@ -15,7 +15,9 @@ alias ll='ls -lahF'		# Список с деталями
 alias la='ls -A'
 
 # Алиасы для подключения к бд
-alias quizwhiz-dev='mycli --defaults-file=~/.mysql-configs/dev/quizwhiz-dev.cnf'
+alias quizwhiz-db-dev='mycli --defaults-file=~/.mysql-configs/dev/quizwhiz-dev.cnf'
+
+alias bat='batcat'
 
 eval "$(starship init zsh)"
 fastfetch
